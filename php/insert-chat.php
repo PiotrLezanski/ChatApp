@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if(iasset($_SESSION['unique_id']))
+    if(isset($_SESSION['unique_id']))
     {
         include_once "config.php";
         $outgoing_id = mysqli_real_escape_string($conn, $_POST['outgoing_id']);
@@ -11,7 +11,11 @@
         {
             $sql = mysqli_query($conn,
                                 "INSERT INTO messages (incoming_msg_id, outgoing_msg_id, msg)
-                                VALUES ({$incoming_id}, {$outgoing_id}, '{$message}')");
+                                VALUES ({$incoming_id}, {$outgoing_id}, '{$message}')") or die();
         }
+    }
+    else
+    {
+        header("../login.php");
     }
 ?>

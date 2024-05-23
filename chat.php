@@ -37,62 +37,12 @@
             </header>
 
             <div class="chat-box">
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>Lorem impsum lorem ipsum lorem ipsum</p>
-                    </div>
-                </div>
-
-                <div class="chat incoming">
-                    <img src="image.jpg" alt="">
-                    <div class="details">
-                        <p>Lorem impsum lorem ipsum lorem ipsum</p>
-                    </div>
-                </div>
-
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>Lorem impsum lorem ipsum lorem ipsum</p>
-                    </div>
-                </div>
-
-                <div class="chat incoming">
-                    <img src="image.jpg" alt="">
-                    <div class="details">
-                        <p>Lorem impsum lorem ipsum lorem ipsum</p>
-                    </div>
-                </div>
-
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>Lorem impsum lorem ipsum lorem ipsum</p>
-                    </div>
-                </div>
-
-                <div class="chat incoming">
-                    <img src="image.jpg" alt="">
-                    <div class="details">
-                        <p>Lorem impsum lorem ipsum lorem ipsum</p>
-                    </div>
-                </div>
-
-                <div class="chat outgoing">
-                    <div class="details">
-                        <p>Lorem impsum lorem ipsum lorem ipsum</p>
-                    </div>
-                </div>
-
-                <div class="chat incoming">
-                    <img src="image.jpg" alt="">
-                    <div class="details">
-                        <p>Lorem impsum lorem ipsum lorem ipsum</p>
-                    </div>
-                </div>
+                <!-- data inserted through php -->
             </div>
 
             <form action="#" class="typing-area" autocomplete="off">
-                <input type="text" name="sender_id" value="<?php echo $_SESSION['unique_id']; ?>" hidden> <!-- message sender -->
-                <input type="text" name="receiver_id" value="<?php echo $user_id; ?>" hidden> <!-- message receiver -->
+                <input type="text" name="outgoing_id" value="<?php echo $_SESSION['unique_id']; ?>" hidden> <!-- message sender -->
+                <input type="text" name="incoming_id" value="<?php echo $user_id; ?>" hidden> <!-- message receiver -->
                 <input type="text" name="message" class="input-field" placeholder="Write message here...">
                 <button><i class="fab fa-telegram-plane"></i></button>
             </form>
